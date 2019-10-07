@@ -16,14 +16,13 @@ class point:
         sum=0
         for i in range(self.dim):
             sum+=self.data[i]*apoint.data[i]
-    def add (self,p2):
-        add=0
+    def add(self,p2):
         for i in range(self.dim):
-            add=self.data[i]+p2.data[i]
-            return sum
-    def sqmag(self,p1):
+            self.data[i]+=p2.data[i]
+            
+    def sqmag(self):
         mag=0
         for i in range(self.dim):
-            mag=(self.data[i])**2+(p1.data[i])**2
+            mag+=(self.data[i])**2
         return mag
 
